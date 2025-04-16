@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf47m6crj7d1t"]
+
+[ext_resource type="Script" uid="uid://bm5vdg7imaj23" path="res://instructions_2.gd" id="1_xr1n8"]
+[ext_resource type="Texture2D" uid="uid://4tjo5n2t2021" path="res://sprites/StartButton.png" id="2_f4s6k"]
+[ext_resource type="Texture2D" uid="uid://bydoktaqu7o82" path="res://sprites/Instructions2.png" id="2_xr1n8"]
+[ext_resource type="Texture2D" uid="uid://cwfl8oyt3utcv" path="res://sprites/HomeButton.png" id="3_xr1n8"]
+[ext_resource type="Texture2D" uid="uid://dnomqfba3ujin" path="res://sprites/arrow.png" id="4_xjfdp"]
+
+[node name="Instructions2" type="Node2D"]
+script = ExtResource("1_xr1n8")
+
+[node name="Instructions" type="Sprite2D" parent="."]
+position = Vector2(1053.11, 593.5)
+scale = Vector2(1.09907, 1.09907)
+texture = ExtResource("2_xr1n8")
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 1339.0
+offset_top = 115.0
+offset_right = 1843.0
+offset_bottom = 293.0
+icon = ExtResource("2_f4s6k")
+
+[node name="nextButton" type="Button" parent="."]
+offset_left = 299.0
+offset_top = 1097.0
+offset_right = 803.0
+offset_bottom = 1275.0
+rotation = -3.14159
+icon = ExtResource("4_xjfdp")
+
+[node name="HomeButton" type="Button" parent="."]
+offset_left = 1335.0
+offset_top = 311.0
+offset_right = 1839.0
+offset_bottom = 489.0
+icon = ExtResource("3_xr1n8")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="nextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]

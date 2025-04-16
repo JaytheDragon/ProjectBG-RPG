@@ -1,0 +1,177 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5jetwnpo483o"]
+
+[ext_resource type="Script" uid="uid://b0h5bkgl7rqcf" path="res://ip.gd" id="1_b3mhs"]
+[ext_resource type="Texture2D" uid="uid://bdguuvh3quok4" path="res://sprites/IP.png" id="2_bidm8"]
+[ext_resource type="Texture2D" uid="uid://ra8wmf3mjk63" path="res://sprites/pixil-layer-Background (2).png" id="3_4jdoy"]
+[ext_resource type="Texture2D" uid="uid://4tjo5n2t2021" path="res://sprites/StartButton.png" id="3_a0ra0"]
+[ext_resource type="Texture2D" uid="uid://cwfl8oyt3utcv" path="res://sprites/HomeButton.png" id="4_4jdoy"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_b3mhs")
+
+[node name="Instructions" type="Sprite2D" parent="."]
+position = Vector2(1053.11, 593.5)
+scale = Vector2(1.09907, 1.09907)
+texture = ExtResource("2_bidm8")
+
+[node name="Pixil-layer-background(2)" type="Sprite2D" parent="."]
+position = Vector2(637, 404)
+scale = Vector2(4.07842, 1.3465)
+texture = ExtResource("3_4jdoy")
+
+[node name="ip" type="Label" parent="."]
+offset_left = 900.0
+offset_top = 150.0
+offset_right = 940.0
+offset_bottom = 173.0
+
+[node name="ihp" type="Label" parent="."]
+offset_left = 750.0
+offset_top = 200.0
+offset_right = 790.0
+offset_bottom = 223.0
+
+[node name="addhp" type="Button" parent="."]
+offset_left = 1125.0
+offset_top = 200.0
+offset_right = 1168.0
+offset_bottom = 231.0
+text = "   +   "
+
+[node name="minushp" type="Button" parent="."]
+offset_left = 1075.0
+offset_top = 200.0
+offset_right = 1114.0
+offset_bottom = 231.0
+text = "   -   "
+
+[node name="iatk" type="Label" parent="."]
+offset_left = 750.0
+offset_top = 300.0
+offset_right = 790.0
+offset_bottom = 323.0
+
+[node name="addatk" type="Button" parent="."]
+offset_left = 1125.0
+offset_top = 300.0
+offset_right = 1168.0
+offset_bottom = 331.0
+text = "   +   "
+
+[node name="minusatk" type="Button" parent="."]
+offset_left = 1075.0
+offset_top = 300.0
+offset_right = 1114.0
+offset_bottom = 331.0
+text = "   -   "
+
+[node name="isp" type="Label" parent="."]
+offset_left = 750.0
+offset_top = 250.0
+offset_right = 790.0
+offset_bottom = 273.0
+
+[node name="addsp" type="Button" parent="."]
+offset_left = 1125.0
+offset_top = 250.0
+offset_right = 1168.0
+offset_bottom = 281.0
+text = "   +   "
+
+[node name="minussp" type="Button" parent="."]
+offset_left = 1075.0
+offset_top = 250.0
+offset_right = 1114.0
+offset_bottom = 281.0
+text = "   -   "
+
+[node name="idef" type="Label" parent="."]
+offset_left = 750.0
+offset_top = 350.0
+offset_right = 790.0
+offset_bottom = 373.0
+
+[node name="adddef" type="Button" parent="."]
+offset_left = 1125.0
+offset_top = 350.0
+offset_right = 1168.0
+offset_bottom = 381.0
+text = "   +   "
+
+[node name="minusdef" type="Button" parent="."]
+offset_left = 1075.0
+offset_top = 350.0
+offset_right = 1114.0
+offset_bottom = 381.0
+text = "   -   "
+
+[node name="ispd" type="Label" parent="."]
+offset_left = 750.0
+offset_top = 400.0
+offset_right = 790.0
+offset_bottom = 423.0
+
+[node name="addspd" type="Button" parent="."]
+offset_left = 1125.0
+offset_top = 400.0
+offset_right = 1168.0
+offset_bottom = 431.0
+text = "   +   "
+
+[node name="minusspd" type="Button" parent="."]
+offset_left = 1075.0
+offset_top = 400.0
+offset_right = 1114.0
+offset_bottom = 431.0
+text = "   -   "
+
+[node name="icrit" type="Label" parent="."]
+offset_left = 750.0
+offset_top = 450.0
+offset_right = 790.0
+offset_bottom = 473.0
+
+[node name="addcrit" type="Button" parent="."]
+offset_left = 1125.0
+offset_top = 450.0
+offset_right = 1168.0
+offset_bottom = 481.0
+text = "   +   "
+
+[node name="minuscrit" type="Button" parent="."]
+offset_left = 1075.0
+offset_top = 450.0
+offset_right = 1083.0
+offset_bottom = 458.0
+text = "   -   "
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 862.0
+offset_top = 481.0
+offset_right = 1366.0
+offset_bottom = 659.0
+scale = Vector2(0.439998, 0.48)
+icon = ExtResource("3_a0ra0")
+
+[node name="HomeButton" type="Button" parent="."]
+offset_left = 863.0
+offset_top = 581.0
+offset_right = 1367.0
+offset_bottom = 759.0
+scale = Vector2(0.439998, 0.48)
+icon = ExtResource("4_4jdoy")
+
+[connection signal="pressed" from="addhp" to="." method="_on_addhp_pressed"]
+[connection signal="pressed" from="minushp" to="." method="_on_minushp_pressed"]
+[connection signal="pressed" from="addatk" to="." method="_on_addatk_pressed"]
+[connection signal="pressed" from="minusatk" to="." method="_on_minusatk_pressed"]
+[connection signal="pressed" from="addsp" to="." method="_on_addsp_pressed"]
+[connection signal="pressed" from="minussp" to="." method="_on_minussp_pressed"]
+[connection signal="pressed" from="adddef" to="." method="_on_adddef_pressed"]
+[connection signal="pressed" from="minusdef" to="." method="_on_minusdef_pressed"]
+[connection signal="pressed" from="addspd" to="." method="_on_addspd_pressed"]
+[connection signal="pressed" from="minusspd" to="." method="_on_minusspd_pressed"]
+[connection signal="pressed" from="addcrit" to="." method="_on_addcrit_pressed"]
+[connection signal="pressed" from="minuscrit" to="." method="_on_minuscrit_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]

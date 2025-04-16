@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsvfby0b0m33y"]
+
+[ext_resource type="Script" uid="uid://ia3kge3m2l57" path="res://lose.gd" id="1_46blr"]
+[ext_resource type="Texture2D" uid="uid://bwcbjllmxsxpq" path="res://sprites/You Lost....png" id="2_xrsfq"]
+[ext_resource type="Texture2D" uid="uid://c3mirg0tp55ps" path="res://sprites/Try Again.png" id="3_bpxic"]
+[ext_resource type="Texture2D" uid="uid://cwfl8oyt3utcv" path="res://sprites/HomeButton.png" id="4_xrsfq"]
+
+[node name="Lose" type="Node2D"]
+script = ExtResource("1_46blr")
+
+[node name="YouLost___" type="Sprite2D" parent="."]
+position = Vector2(871.713, 492)
+scale = Vector2(2.11826, 2)
+texture = ExtResource("2_xrsfq")
+
+[node name="RestartButton" type="Button" parent="."]
+z_index = 1
+offset_left = 760.713
+offset_top = 738.0
+offset_right = 968.713
+offset_bottom = 815.0
+scale = Vector2(1.0359, 1.09641)
+icon = ExtResource("3_bpxic")
+
+[node name="HomeButton" type="Button" parent="."]
+offset_left = 725.0
+offset_top = 834.0
+offset_right = 1229.0
+offset_bottom = 1012.0
+scale = Vector2(0.560002, 0.48)
+icon = ExtResource("4_xrsfq")
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvk0s1gnav84u"]
+
+[ext_resource type="Script" uid="uid://cbb8pq0ph3g2m" path="res://start.gd" id="1_y5hus"]
+[ext_resource type="Texture2D" uid="uid://bwwbgma3s6wnj" path="res://sprites/Start.png" id="2_y5hus"]
+[ext_resource type="Texture2D" uid="uid://4tjo5n2t2021" path="res://sprites/StartButton.png" id="3_4a3qj"]
+[ext_resource type="Texture2D" uid="uid://cr1fu0a4copok" path="res://sprites/InstructionsButton.png" id="4_oiuna"]
+[ext_resource type="Texture2D" uid="uid://cvqfi88uucq1a" path="res://sprites/IPButton.png" id="5_oiuna"]
+[ext_resource type="Texture2D" uid="uid://by7yey3fs250x" path="res://sprites/Music Info.png" id="6_4a3qj"]
+
+[node name="Start" type="Node2D"]
+script = ExtResource("1_y5hus")
+
+[node name="Home" type="Sprite2D" parent="."]
+position = Vector2(1053.11, 593.5)
+scale = Vector2(1.09907, 1.09907)
+texture = ExtResource("2_y5hus")
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 799.0
+offset_top = 620.0
+offset_right = 1303.0
+offset_bottom = 798.0
+icon = ExtResource("3_4a3qj")
+
+[node name="InstructionsButton" type="Button" parent="."]
+offset_left = 792.0
+offset_top = 829.0
+offset_right = 1296.0
+offset_bottom = 1007.0
+icon = ExtResource("4_oiuna")
+
+[node name="InstructionsButton2" type="Button" parent="."]
+offset_left = 1347.0
+offset_top = 827.0
+offset_right = 1851.0
+offset_bottom = 1005.0
+icon = ExtResource("5_oiuna")
+
+[node name="MusicInfo" type="Sprite2D" parent="."]
+position = Vector2(409, 71)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("6_4a3qj")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="InstructionsButton" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="InstructionsButton2" to="." method="_on_IP_button_pressed"]
