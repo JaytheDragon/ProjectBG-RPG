@@ -436,7 +436,6 @@ offset_bottom = 671.0
 text = "Special Attack"
 
 [node name="guard" type="Button" parent="."]
-visible = false
 offset_left = 14.0
 offset_top = 680.0
 offset_right = 155.0

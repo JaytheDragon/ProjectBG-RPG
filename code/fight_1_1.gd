@@ -124,8 +124,6 @@ func _ready() -> void:
 	Global.spd = 5
 	Global.crit = 5
 	Global.stats = 5
-	update_stats()
-	update_sp_moves()
 	tempHP = Global.currentHP
 	Global.currentHP = Global.hp + Global.ihp
 	tempHP = Global.currentHP - tempHP
@@ -134,6 +132,8 @@ func _ready() -> void:
 	Global.currentSP = Global.sp + Global.isp
 	tempSP = Global.currentSP - tempSP
 	tempSP *= -1
+	update_stats()
+	update_sp_moves()
 	update_labels()
 	update_items()
 	update_sp_moves()
@@ -416,8 +416,10 @@ func hide_dialogue_box() -> void:
 func disable_combat_buttons(disable: bool) -> void:
 	# Example of disabling or enabling relevant combat buttons
 	$attack.disabled = disable
-	$mattack.disabled = disable
-	$guard.disabled = disable
+	if Global.currentSP >= 5:
+		$mattack.disabled = disable
+	if Global.currentSP >= 3:
+		$guard.disabled = disable
 	useGrenade.disabled = disable or (Global.grenade < 1)
 	useBomb.disabled = disable or (Global.bomb < 1)
 	useNuke.disabled = disable or (Global.nuke < 1)

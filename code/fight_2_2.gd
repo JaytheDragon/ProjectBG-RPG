@@ -399,8 +399,10 @@ func hide_dialogue_box() -> void:
 func disable_combat_buttons(disable: bool) -> void:
 	# Example of disabling or enabling relevant combat buttons
 	$attack.disabled = disable
-	$mattack.disabled = disable
-	$guard.disabled = disable
+	if Global.currentSP >= 5:
+		$mattack.disabled = disable
+	if Global.currentSP >= 3:
+		$guard.disabled = disable
 	useGrenade.disabled = disable or (Global.grenade < 1)
 	useBomb.disabled = disable or (Global.bomb < 1)
 	useNuke.disabled = disable or (Global.nuke < 1)
