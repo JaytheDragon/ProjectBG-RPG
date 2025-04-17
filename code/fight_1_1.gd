@@ -124,6 +124,7 @@ func _ready() -> void:
 	Global.spd = 5
 	Global.crit = 5
 	Global.stats = 5
+	Global.money = 0
 	tempHP = Global.currentHP
 	Global.currentHP = Global.hp + Global.ihp
 	tempHP = Global.currentHP - tempHP
